@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios'
 
+
 // const coindeskURL = "http://localhost:80081/countrise";
 
 // class Home extends Component {
@@ -37,11 +38,12 @@ class Home extends Component {
   }
     render() {
         return (
-            <div>
-                <h1>countrise</h1>
+          <div>
+           
             </div>
+         
         );
-    }
+    };
 }
 
 export default Home;
