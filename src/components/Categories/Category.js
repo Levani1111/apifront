@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import Ingredients from "../Ingredients/Ingredients";
-import Measures from "../Ingredients/Measures";
+import Axios from "axios";
+//import Currencies from "../Ingredients/Currencies";
+//import Languages from "../Ingredients/Languages";
 import "./Category.css";
 import Modal from "../Modal/Modal";
 
-const url = "localhost:8081";
+const url = "http://localhost:8081";
 class Category extends Component {
   constructor(props) {
     super(props);
@@ -25,17 +26,17 @@ class Category extends Component {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <h1>{this.props.match.params.countryCategory}</h1>
+            <h1>{this.props.match.params.name}</h1>
             {this.state.data.map(item => (
               <Modal
                 img={
                   <img
-                    src={item.countryThumb}
+                    src={item.flag}
                     className="modal-img"
-                    alt={item.countryName}
+                    alt={item.name}
                   />
                 }
-                src={item.countryThumb}
+                src={item.flag}
               />
             ))}
           </div>

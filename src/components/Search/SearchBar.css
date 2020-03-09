@@ -1,9 +1,11 @@
 .searchbar form {
+	float: right;
 	width: 20vw;
 	font-size: 1.05vw;
 }
 .searchbar input,
 .searchbar button {
+	
 	height: 2vw !important;
 	min-height: 1.81rem;
 }
@@ -11,6 +13,7 @@
 	border-right: none;
 }
 .searchbar button {
+	
 	border: none;
 }
 @media only screen and (max-width: 767px) {

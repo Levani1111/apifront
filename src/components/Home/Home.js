@@ -2,44 +2,44 @@ import React, { Component } from "react";
 import "./Home.css";
 import HomeHeader from "../images/HomeHeader";
 import Carousel from "../Carousel/Carousel";
-import MultiCarousel from "../MultiCarousel/MultiCarousel";
-class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: []
-    };
-  }
+import Axios from "axios";
+//import MultiCarousel from "../MultiCarousel/MultiCarousel";
 
-  render() {
-    console.log(this.props.data);
-    return (
-      <div>
-        <div className="row">
-          <div className="d-none col-md-12">
-            <HomeHeader />
-          </div>
-        </div>
-        <div className="row mt-5 mb-3 carousel-row">
-          <div className="d-flex col-md-12 flex-column justify-content-center">
-            <h2 className="new-cocktails">Recent Additions</h2>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-12">
-            <Carousel data={this.props.data} />
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
-export default Home;
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       data: []
+//     };
+//   }
+
+//   render() {
+//     console.log(this.props.data);
+//     return (
+//       <div>
+//         <div className="row">
+//           <div className="d-none col-md-12">
+//             <HomeHeader />
+//           </div>
+//         </div>
+//         <div className="row mt-5 mb-3 carousel-row">
+//           <div className="d-flex col-md-12 flex-column justify-content-center">
+//             <h2 className="new-countries">Recent Additions</h2>
+//           </div>
+//         </div>
+//         <div className="row">
+//           <div className="col-md-12">
+//             <Carousel data={this.props.data} />
+//           </div>
+//         </div>
+//       </div>
+//     );
+//   }
+// }
 
 
 
-// import React, { Component } from 'react';
-// import Axios from 'axios'
+
+
 
 
 // // const coindeskURL = "http://localhost:80081/countrise";
@@ -59,26 +59,26 @@ export default Home;
  
 
 
-// class Home extends Component {
-//   state = {
-//     countries:[]
-//   }
-//     componentDidMount() {
-//       Axios.get(`http://localhost:8081/`)
-//       .then(res => {
-//         const countries = res.data;
-//         this.setState({ countries });
-//       })
-//   }
+class Home extends Component {
+   state = {
+     countries:[]
+   }
+     componentDidMount() {
+       Axios.get(`http://localhost:8081/`)
+       .then(res => {
+         const countries = res.data;
+         this.setState({ countries });
+       })
+   }
 
-//   render() {
-//     return (
-//       <ul>
-//         { this.state.countries.map(country => <li>{country.name}</li>)}
-//       </ul>
-//       )
-//   }
-// }
+   render() {
+     return (
+       <ul>
+         { this.state.countries.map(country => <li>{country.name}</li>)}
+       </ul>
+       )
+   }
+ }
 
 
 
@@ -110,5 +110,4 @@ export default Home;
 
 
 
-
-// export default Home;
+ export default Home;

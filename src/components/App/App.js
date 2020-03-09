@@ -6,8 +6,19 @@ import Navbar from "../nav/Navbar";
 import { Route } from "react-router-dom";
 import SearchBar from "../Search/SearchBar";
 import Countries from "../Countries/Countries";
+import Modal from "../Modal/Modal";
+import Category from "../Categories/Category";
+import Results from "../Results/Results";
+import Categories from "../Categories/Categories";
+import About from "../About/About";
+import Contact from "../Contact/Contact";
+import AddCountry from "../AddCountry/AddCountry";
+import UpdateCountry from "../UpdateCountry/UpdateCountry";
+import RemoveCountry from "../RemoveCountry/RemoveCountry"
 
-const url = "localhost:8081";
+
+
+const url = "https://localhost:8081";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -18,8 +29,7 @@ class App extends Component {
   }
   componentDidMount() {
     Axios.get(url).then(res => {
-      const countries = res.data;
-      this.setState({ countries });
+      this.setState({ data: res, loading: false });
     })};
     
     render() {
@@ -43,6 +53,23 @@ class App extends Component {
             path="/search"
             render={() => <SearchBar data={this.state.data} />}
           />
+          <Route path="/results" component={Results} />
+          <Route
+            path="/categories"
+            exact
+            render={() => <Categories data={this.state.data} />}
+          />
+          <Route
+            path="/modal"
+            render={() => <Modal data={this.state.data} />}
+          />
+          <Route path="/add" component={AddCountry} />
+          <Route path="/update" component={UpdateCountry} />
+          <Route path="/delete" component={RemoveCountry} />
+          <Route path="/about" component={About} />
+          <Route path="/categories/:name" exact component={Category} />
+          <Route path="/contact" component={Contact} />
+         
         </main>
       </div>
     );

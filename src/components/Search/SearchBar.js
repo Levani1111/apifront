@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import "./SearchBar.css";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import faStyles from "font-awesome/css/font-awesome.css";
-// import { library } from "@fortawesome/fontawesome-svg-core";
-// import { faHamburger, faPizzaSlice } from "@fortawesome/free-solid-svg-icons";
-// library.add(faHamburger, faPizzaSlice);
+
 
 class Searchbar extends Component {
 	constructor(props) {
@@ -22,7 +18,7 @@ class Searchbar extends Component {
 	handleSubmit = e => {
 		e.preventDefault();
 		this.props.data.map(item => {
-			if (item.Countryname.toLowerCase().includes(this.state.searchBar)) {
+			if (item.name.toLowerCase().includes(this.state.searchBar)) {
 				return this.state.results.push(item);
 			} else {
 				return null;
@@ -51,23 +47,23 @@ class Searchbar extends Component {
 			);
 		}
 
-		const { countryName } = this.state;
+		const { name } = this.state;
 
 		return (
-			<div className='searchbar d-none d-md-flex' onSubmit={this.handleSubmit}>
-				<form>
-					<input
-						placeholder='Name of Country'
-						type='text'
-						value={countryName}
-						name='searchBar'
-						className='searchbar'
-						onChange={this.handleChange}
-					></input>
-					<button type='submit'>Search</button>
-				</form>
-			</div>
-		);
+      <div className="searchbar d-none d-md-flex" onSubmit={this.handleSubmit}>
+        <form>
+          <input
+            placeholder="Name of Country"
+            type="text"
+            value={name}
+            name="searchBar"
+            className="searchbar"
+            onChange={this.handleChange}
+          ></input>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    );
 	}
 }
 export default Searchbar;

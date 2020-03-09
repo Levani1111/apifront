@@ -21,9 +21,9 @@ class Results extends Component {
       <div>
         <h1>Look at the Countries!</h1>
         {this.state.resultData.map(country => (
-          <div className="category-country" key={country._id}>
-            <h2>{country.countryName}</h2>
-            <img src={country.countryThumb} alt={country.countryName} />
+          <div className="category-country" key={country.id}>
+            <h2>{country.name}</h2>
+            <img src={country.flag} alt={country.name} />
 
             <ul className="categoryData">
               <li>Capital:{" " + country.capital}</li>
@@ -31,11 +31,11 @@ class Results extends Component {
               <li>
                 Languages:
                 <span>
-                  <Languages data={country.countryLanguages} />
+                  <Languages data={country.languages} />
                 </span>
               </li>
               <li>
-                Currencies: <Currencies data={country.countryCurrencies} />
+                Currencies: <Currencies data={country.currencies} />
               </li>
             </ul>
           </div>

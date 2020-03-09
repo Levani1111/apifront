@@ -1,11 +1,11 @@
 .homeHeader {
-	background-image: url("./world.jpg");
+	background-image: url("./the earth.jpg");
 	overflow: hidden;
 	position: relative;
 	z-index: -4;
 	background-repeat: no-repeat;
 	height: 36vw;
-	width: 80vw;
+	width: 100vw;
 	margin: 0 auto;
 	justify-content: center;
 	background-position-x: center;
