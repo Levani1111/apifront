@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+.root{
+  background-color: #e9ecef;
+}
+
+
+.countryContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 5px;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+.jumbotron {
+  background-image: 
+  url("./Cuntres.png"); 
+  background-size: 150%;
+  background-attachment: fixed;
+  background-position: cover;
+  background-repeat: no-repeat;
+  margin-top: 200px;
+  width: 100%;
+  height: 200%;
+  box-shadow: rgb(0, 0, 7) 0px 0px 2px 2px;
+}
+
+.homeTitle {
+  font-weight: bold;
+  text-align:center;
+}
+
+.card-body{
+ box-shadow: rgb(0, 0, 7) 0px 0px 1px 1px;
+}
+
+.homeText {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.countryForm{
+ padding: 50px 300px 0px 300px;
+}
+
+ .flag{
+width:286px;
+height: 166px;
+background-size: cover;
+background-position: center;
+box-shadow: rgb(0, 0, 7) 0px 0px 1px 1px;
+}
+
+.asylum{
+  border: 1px solid rgba(254, 254, 254, 0.125);
+  border-radius: 5px;
+}
+
+.asylumInfo{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 10px;
+}
+
