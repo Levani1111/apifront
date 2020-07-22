@@ -9,35 +9,36 @@ import getCountryAPI from "../util"
 
 
 
-class Regions extends Component {
+class Area extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: [],
     };
   }
 
-  getRegionData = e => {
-    let regionName = e.target.id;
-    let Url =  `${getCountryAPI()}region/`;
-    let regionUrl = `${Url}${regionName}`;
-    fetch(regionUrl)
-      .then(response => {
+  getAreaData = (e) => {
+    let areaName = e.target.id;
+    let Url = `${getCountryAPI()}area/`;
+    let areaUrl = `${Url}${areaName}`;
+    fetch(areaUrl)
+      .then((response) => {
         return response.json();
       })
-      .then(data => {
+      .then((data) => {
         this.setState({ data: data });
       });
-  }; 
+  };
 
   render() {
-    let countries = this.state.data.map(item => {
+    let countries = this.state.data.map((item) => {
       return (
-      
-        <div className="region" key={item.name}>
-        
+        <div className="area" key={item.name}>
           <Card style={{ width: "18rem" }}>
-            <div className="flag" style={{backgroundImage: `url(${item.flag})`}}></div>
+            <div
+              className="flag"
+              style={{ backgroundImage: `url(${item.flag})` }}
+            ></div>
             <Card.Body>
               <Card.Title>{item.name}</Card.Title>
               <Card.Text>Capital: {item.capital}</Card.Text>
@@ -46,7 +47,6 @@ class Regions extends Component {
               </Link>
             </Card.Body>
           </Card>
-          
         </div>
       );
     });
@@ -54,8 +54,8 @@ class Regions extends Component {
       <div>
         <DropdownButton
           id="dropdown-basic-button"
-          onClick={this.getRegionData}
-          title="Regions"
+          onClick={this.getAreaData}
+          title="Area"
         >
           <Dropdown.Item id="Africa" href="#/action-1">
             Africa
@@ -82,4 +82,4 @@ class Regions extends Component {
   }
 }
 
-export default Regions;
+export default Area;

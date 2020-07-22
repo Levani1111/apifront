@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Card from "react-bootstrap/Card";
 import getCountryAPI from '../util';
-// import Countries from "./countries";
+//  import Countries from "./countries";
 
 // import axios from "axios";
 // import "./Countries";
@@ -51,11 +51,11 @@ class CountryDetails extends Component {
     const {
       name,
       capital,
-      region,
+      area,
       population,
-      demonym,
+      nativeName,
       flag,
-      asylum
+      asylum,
     } = this.props.details;
     const asylumInfo = asylum && this.displayAsylum(asylum);
     console.log(asylumInfo);
@@ -65,17 +65,15 @@ class CountryDetails extends Component {
           <Card.Header as="h4">{name}</Card.Header>
           <Card.Body>
             <Card.Title>Capital City: {capital}</Card.Title>
-            <p>Region: {region}</p>
+            <p>Area: {area}</p>
             <p>Population: {population}</p>
-            <p>Demonym: {demonym}</p>
+            <p>NativeName: {nativeName}</p>
             <p>Flag: </p>
-            <img src={flag} alt="flag"/>
+            <img src={flag} alt="flag" />
           </Card.Body>
         </Card>
         <h3>Asylum Information:</h3>
-        <div className="asylumInfo">
-        {asylumInfo}
-        </div>
+        <div className="asylumInfo">{asylumInfo}</div>
       </div>
     );
   }
