@@ -37,7 +37,23 @@
   text-align: center;
 }
 .countryForm{
- padding: 50px 300px 0px 300px;
+  padding-top: 29px;
+ font-weight: bold;
+ text-align: center;
+ padding-left: 20vw;
+ padding-right: 20vw;
+}
+#countryName {
+  text-align: center;
+}
+#capital {
+  text-align: center;
+}
+#area {
+  text-align: center;
+}
+#population {
+  text-align: center;
 }
 .flag{
 width:286px;
