@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Card from "react-bootstrap/Card";
 import getCountryAPI from '../util';
-//  import Countries from "./countries";
-
-// import axios from "axios";
-// import "./Countries";
 
 let countryUrl = `${getCountryAPI()}name/`;
 
@@ -36,12 +32,6 @@ class CountryDetails extends Component {
         return (
           <div className="languages">
             <p> languages: {item.languages}</p>
-            {/* <p>
-              Country of Asylum or Residence:{" "}
-              {item.CountryOfLanguagesOrResidence}
-            </p> */}
-            {/* <p> Year: {item.year}</p>
-            <p> Total: {item.total}</p> */}
           </div>
         );
       })
@@ -69,13 +59,9 @@ class CountryDetails extends Component {
             </Card.Title> 
             <h6>AREA: {area} </h6>
             <h6>POPULATION: {population}</h6>
-            {/* <p>NativeName: {nativeName}</p> */}
-            {/* <p>Flag: </p> */}
             <img src={flag} alt="flag" />
           </Card.Body>
         </Card>
-        {/* <h3>languages Information:</h3>
-        <div className="languagesInfo">{languagesInfo}</div> */}
       </div>
     );
   }
