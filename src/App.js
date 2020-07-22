@@ -41,7 +41,10 @@ class App extends Component {
             )}
           />
         </main>
-      </div>
+        <div class="footer">
+          <p>© 2020 Copyright Levani Papashvili</p>
+        </div>
+    </div>
     );
   }
 }
