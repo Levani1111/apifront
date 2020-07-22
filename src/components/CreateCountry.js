@@ -89,10 +89,11 @@ class CreateCountry extends Component {
             onChange={this.onChange}
           />
         </Form.Group>
-
-        <Button variant="primary" type="submit">
+       <div class="text-center">
+        <Button variant="primary " type="submit">
           Submit
         </Button>
+        </div>
       </Form>
     );
   }
