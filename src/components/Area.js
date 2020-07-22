@@ -7,8 +7,6 @@ import Dropdown from "react-bootstrap/Dropdown";
 import getCountryAPI from "../util"
 
 
-
-
 class Area extends Component {
   constructor(props) {
     super(props);
