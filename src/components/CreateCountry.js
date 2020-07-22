@@ -42,59 +42,64 @@ class CreateCountry extends Component {
 
   render() {
     return (
-      <Form className="countryForm" onSubmit={this.submitHandler}>
-        <Form.Group controlId="countryName">
-          <Form.Label>Country Name</Form.Label>
-          <Form.Control
-            type="text"
-            name="name"
-            placeholder="Country Name"
-            value={this.state.name}
-            onChange={this.onChange}
-          />
-          <Form.Text className="text-muted">
-            First letters should be capitalized.
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group controlId="capital">
-          <Form.Label>Capital</Form.Label>
-          <Form.Control
-            type="text"
-            name="capital"
-            placeholder="Capital"
-            value={this.state.capital}
-            onChange={this.onChange}
-          />
-        </Form.Group>
-
-        <Form.Group controlId="area">
-          <Form.Label>Area</Form.Label>
-          <Form.Control
-            type="text"
-            name="area"
-            placeholder="area"
-            value={this.state.area}
-            onChange={this.onChange}
-          />
-        </Form.Group>
-
-        <Form.Group controlId="population">
-          <Form.Label>Population</Form.Label>
-          <Form.Control
-            type="number"
-            name="population"
-            placeholder="Population"
-            value={this.state.population}
-            onChange={this.onChange}
-          />
-        </Form.Group>
-       <div class="text-center">
-        <Button variant="primary " type="submit">
-          Submit
-        </Button>
+      <div>
+        <div className="h_1">
+          <h1>CREATE COUNTRY</h1>
         </div>
-      </Form>
+        <Form className="countryForm" onSubmit={this.submitHandler}>
+          <Form.Group controlId="countryName">
+            <Form.Label>Country Name</Form.Label>
+            <Form.Control
+              type="text"
+              name="name"
+              placeholder="Country Name"
+              value={this.state.name}
+              onChange={this.onChange}
+            />
+            <Form.Text className="text-muted">
+              First letters should be capitalized.
+            </Form.Text>
+          </Form.Group>
+
+          <Form.Group controlId="capital">
+            <Form.Label>Capital</Form.Label>
+            <Form.Control
+              type="text"
+              name="capital"
+              placeholder="Capital"
+              value={this.state.capital}
+              onChange={this.onChange}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="area">
+            <Form.Label>Area</Form.Label>
+            <Form.Control
+              type="text"
+              name="area"
+              placeholder="area"
+              value={this.state.area}
+              onChange={this.onChange}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="population">
+            <Form.Label>Population</Form.Label>
+            <Form.Control
+              type="number"
+              name="population"
+              placeholder="Population"
+              value={this.state.population}
+              onChange={this.onChange}
+            />
+          </Form.Group>
+          <div class="text-center">
+            <Button variant="primary " type="submit">
+              Submit
+            </Button>
+          </div>
+        </Form>
+      </div>
     );
   }
 }
