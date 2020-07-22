@@ -56,10 +56,15 @@ background-position: center;
 box-shadow: rgb(0, 0, 7) 0px 0px 1px 1px;
 }
 
-.asylum{
+img {
+  width:286px;
+  height: 166px;
+}
+
+/* .asylum{
   border: 1px solid rgba(254, 254, 254, 0.125);
   border-radius: 5px;
-}
+} */
 
 .cart_details{
   display: flexbox;

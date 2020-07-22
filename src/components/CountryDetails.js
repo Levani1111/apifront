@@ -65,10 +65,10 @@ class CountryDetails extends Component {
           <Card.Header as="h1">{name}</Card.Header>
           <Card.Body>
             <Card.Title>Capital City: {capital}</Card.Title>
-            <p>Area: {area}</p>
+            <p>Area: {area} </p>
             <p>Population: {population}</p>
             {/* <p>NativeName: {nativeName}</p> */}
-            <p>Flag: </p>
+            {/* <p>Flag: </p> */}
             <img src={flag} alt="flag" />
           </Card.Body>
         </Card>
