@@ -20,27 +20,28 @@ class CountryDetails extends Component {
     const country = this.props.match.params.name;
     const url = `${countryUrl}${country}`;
     fetch(url)
-      .then(response => response.json())
-      .then(response => {
+      .then((response) => response.json())
+      .then((response) => {
         this.props.setCountryDetails(response[0]);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error(err);
       });
   }
 
-  displayAsylum = asylum => {
+  displayLanguages = (languages) => {
     return (
-      asylum &&
-      asylum.map(item => {
+      languages &&
+      languages.map((item) => {
         return (
-          <div className="asylum">
-            <p> Origin: {item.Origin}</p>
-            <p>
-              Country of Asylum or Residence: {item.CountryOfAsylumOrResidence}
-            </p>
-            <p> Year: {item.year}</p>
-            <p> Total: {item.total}</p>
+          <div className="languages">
+            <p> languages: {item.languages}</p>
+            {/* <p>
+              Country of Asylum or Residence:{" "}
+              {item.CountryOfLanguagesOrResidence}
+            </p> */}
+            {/* <p> Year: {item.year}</p>
+            <p> Total: {item.total}</p> */}
           </div>
         );
       })
@@ -53,27 +54,26 @@ class CountryDetails extends Component {
       capital,
       area,
       population,
-      nativeName,
       flag,
-      asylum,
+      languages,
     } = this.props.details;
-    const asylumInfo = asylum && this.displayAsylum(asylum);
-    console.log(asylumInfo);
+    const languagesInfo = languages && this.displayLanguages(languages);
+    console.log(languagesInfo);
     return (
-      <div>
+      <div className="cart_details">
         <Card>
-          <Card.Header as="h4">{name}</Card.Header>
+          <Card.Header as="h1">{name}</Card.Header>
           <Card.Body>
             <Card.Title>Capital City: {capital}</Card.Title>
             <p>Area: {area}</p>
             <p>Population: {population}</p>
-            <p>NativeName: {nativeName}</p>
+            {/* <p>NativeName: {nativeName}</p> */}
             <p>Flag: </p>
             <img src={flag} alt="flag" />
           </Card.Body>
         </Card>
-        <h3>Asylum Information:</h3>
-        <div className="asylumInfo">{asylumInfo}</div>
+        {/* <h3>languages Information:</h3>
+        <div className="languagesInfo">{languagesInfo}</div> */}
       </div>
     );
   }

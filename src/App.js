@@ -28,7 +28,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
           <Route path="/countries" component={Countries} />
-          {/* <Route path="/area" component={Area} /> */}
+          <Route path="/area" component={Area} />
           <Route path="/create" component={CreateCountry} />
           <Route
             path="/country-details/:name"

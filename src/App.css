@@ -61,10 +61,12 @@ box-shadow: rgb(0, 0, 7) 0px 0px 1px 1px;
   border-radius: 5px;
 }
 
-.asylumInfo{
-  display: grid;
+.cart_details{
+  display: flexbox;
+  text-align: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(6, 1fr);
   grid-gap: 10px;
+  color: blue;
 }
 
