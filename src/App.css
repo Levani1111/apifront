@@ -72,7 +72,12 @@ h1 {
   padding-top: 25px;
 }
 
-.cart_details{
+.cart_details {
+  padding-top: 30px;
+  padding-left:10vw;
+  padding-right: 10vw;
+  margin-left: 40px;
+  margin-right: 40px;
   display: flexbox;
   text-align: center;
   grid-template-columns: repeat(3, 1fr);
