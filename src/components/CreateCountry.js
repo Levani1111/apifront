@@ -11,9 +11,9 @@ class CreateCountry extends Component {
     this.state = {
       name: "",
       capital: "",
-      region: "",
+      area: "",
       population: 0,
-      demonym: ""
+      
     };
   }
 
@@ -32,9 +32,8 @@ class CreateCountry extends Component {
       .post(getCountryAPI(), {
         name: this.state.name,
         capital: this.state.capital,
-        region: this.state.region,
+        area: this.state.area,
         population: this.state.population,
-        demonym: this.state.demonym
       })
       .then(function(response) {
         console.log(response);
@@ -69,13 +68,13 @@ class CreateCountry extends Component {
           />
         </Form.Group>
 
-        <Form.Group controlId="region">
-          <Form.Label>Region</Form.Label>
+        <Form.Group controlId="area">
+          <Form.Label>Area</Form.Label>
           <Form.Control
             type="text"
-            name="region"
-            placeholder="Region"
-            value={this.state.region}
+            name="area"
+            placeholder="area"
+            value={this.state.area}
             onChange={this.onChange}
           />
         </Form.Group>
@@ -87,17 +86,6 @@ class CreateCountry extends Component {
             name="population"
             placeholder="Population"
             value={this.state.population}
-            onChange={this.onChange}
-          />
-        </Form.Group>
-
-        <Form.Group controlId="demonym">
-          <Form.Label>Demonym</Form.Label>
-          <Form.Control
-            type="text"
-            name="demonym"
-            placeholder="Demonym"
-            value={this.state.demonym}
             onChange={this.onChange}
           />
         </Form.Group>
