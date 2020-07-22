@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 function Home(props) {
   return (
     <div>
-      <h1>COUNTRIES API</h1>
+      <div className="h_1">
+        <h1>COUNTRIES API</h1>
+      </div>
       <Jumbotron className="jumbotron">
         <p className="homeText">
           <Link to="/countries">
