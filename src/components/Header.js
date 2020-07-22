@@ -7,7 +7,8 @@ import Button from "react-bootstrap/Button";
 class Header extends Component {
   render() {
     return (
-      <div className="nav justify-content-center">
+      <div className="menu">
+      <div className="nav justify-content-center fixed-top">
         <Navbar bg="primary" variant="dark">
           <div className="nav">
             <Navbar.Brand href="#home"></Navbar.Brand>
@@ -27,7 +28,7 @@ class Header extends Component {
             </Nav>
           </div>
         </Navbar>
-      </div>
+      </div></div>
     );
   }
 }

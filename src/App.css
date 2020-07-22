@@ -11,7 +11,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  grid-gap: 5px;
+  grid-gap: 1vw;
   padding-top: 30px;
   padding-left: 30px;
 }
@@ -82,8 +82,12 @@ h1 {
   text-align: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  grid-gap: 10px;
+  grid-gap: 20vw;
   color: rgb(4, 123, 251);
+}
+
+.menu {
+  padding-top: 50px;
 }
 
 .footer {
