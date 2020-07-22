@@ -19,9 +19,6 @@ class Header extends Component {
               <Link to="/countries">
                 <Button>Countries</Button>
               </Link>
-              {/* <Link to="/area">
-                <Button>Area</Button>
-              </Link> */}
               <Link to="/create">
                 <Button>Create</Button>
               </Link>
