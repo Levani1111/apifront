@@ -1,4 +1,4 @@
-# Country API
+# Country - API - front-end - MERN
 
 ### Technologies Used
 
