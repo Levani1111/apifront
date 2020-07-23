@@ -1,4 +1,4 @@
-# country API
+# Country API
 
 ### Technologies Used
 
