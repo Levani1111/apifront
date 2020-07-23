@@ -21,11 +21,10 @@ class Countries extends Component {
         this.setState({ data: data });
       });
   }
-
-  render() {
+   render() {
     let countries = this.state.data.map(item => {
       return (
-        <div className="country" key={item.id}>
+         <div className="country" key={item.id}>
           <Card
             style={{
               width: "18rem",
@@ -48,7 +47,7 @@ class Countries extends Component {
             </Card.Body>
           </Card>
         </div>
-      );
+        );
     });
     return <div className="countryContainer">{countries}</div>;
   }

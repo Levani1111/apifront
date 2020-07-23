@@ -7,6 +7,7 @@ import CountryDetails from "./components/CountryDetails";
 import Home from "./components/Home";
 import Area from "./components/Area";
 import CreateCountry from "./components/CreateCountry";
+import "@patternfly/react-core/dist/styles/base.css";
 
 class App extends Component {
   constructor(props) {
