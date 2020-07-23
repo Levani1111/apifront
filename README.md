@@ -2,13 +2,13 @@
 
 ### Technologies Used
 
-MongoDb
-Express
-NodeJS
-React
-HTML
-Css
-Bootstrap
+- MongoDb
+- Express
+- NodeJS
+- React
+- HTML
+- Css
+- Bootstrap
 
 ### Objective
 
