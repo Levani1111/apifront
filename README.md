@@ -16,7 +16,7 @@ To build a front end that utilizes the country API. This site was built with Rea
 
 ### Deployment
 
-https://countres.netlify.app/
+https://countryapifrontend.netlify.app
 
 ### Author
 
